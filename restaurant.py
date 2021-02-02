@@ -10,8 +10,6 @@ class Lunch:
 		print(f"\nThat's you bill, {self.name}")
 
 class Customer(Lunch):
-	def __init__(self, name):
-		Lunch.__init__(self, name)
 		
 	def placeOrder(self):
 		import time
