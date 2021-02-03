@@ -9,6 +9,7 @@ class Lunch:
 	def result(self):
 		print(f"\nThat's you bill, {self.name}")
 
+
 class Customer(Lunch):
 		
 	def placeOrder(self):
@@ -35,15 +36,20 @@ class Customer(Lunch):
 	def printFood(self):
 		print(f'\nYour order {self.food} will be ready in 15 minutes!\n')
 
+
 class Employee(Lunch):
+	def __init__(self, name):
+		Lunch.__init__(self, name)
 
 	def takeOrder(self, foodName):
 		print(f"That's your order, {self.name}\n"
 			f"Your {foodName}")
 
+
 class Food:
 	def __init__(self, name):
 		self.food = name
+
 
 
 employee = Employee('Jane Smith')
